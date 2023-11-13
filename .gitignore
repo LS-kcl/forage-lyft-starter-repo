@@ -130,3 +130,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# UML Diagrams
+UML Class Diagram.drawio
+UML Class Diagram.pdf
