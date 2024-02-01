@@ -1,6 +1,3 @@
-from batteries import SpindlerBattery, NubbinBattery
-from engines import CapuletEngine, WilloughbyEngine, SternmanEngine
-
 class Car():
     def __init__(self, engine, battery):
         self.engine = engine
