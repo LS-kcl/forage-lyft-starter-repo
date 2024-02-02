@@ -22,18 +22,18 @@ class TestNubbinBattery(unittest.TestCase):
         self.assertFalse(battery.needs_service())
     
 class TestSpindlerBattery(unittest.TestCase):
-    """Requires servicing every 2 years"""
-    def test_battery_requires_servicing_every_2_years(self):
+    """Requires servicing every 3 years"""
+    def test_battery_requires_servicing_every_3_years(self):
         today = datetime.today().date()
-        last_service_date = today.replace(year=today.year - 3)
+        last_service_date = today.replace(year=today.year - 4)
 
         battery = SpindlerBattery(last_service_date)
         self.assertTrue(battery.needs_service())
     
-    """Does not require servicing under 2 years"""
-    def test_battery_does_not_require_servicing_under_2_years(self):
+    """Does not require servicing under 3 years"""
+    def test_battery_does_not_require_servicing_under_3_years(self):
         today = datetime.today().date()
-        last_service_date = today.replace(year=today.year - 1)
+        last_service_date = today.replace(year=today.year - 2)
 
         battery = SpindlerBattery(last_service_date)
         self.assertFalse(battery.needs_service())
